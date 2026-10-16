@@ -1,0 +1,41 @@
+[
+  {
+    "role": "Programmer Analyst (SEG Software Engineering)",
+    "company": "Cognizant Technology Solutions",
+    "location": "Pune",
+    "start": "Jul 2025",
+    "end": "Present",
+    "points": [
+      "Building an internal application logging and alerting system on Microsoft Power Platform, with real-time email alerts through Power Automate flows.",
+      "Developed end-to-end Playwright automation in TypeScript and Java using the Page Object Model, data-driven Excel inputs and Allure/HTML reporting.",
+      "Configured GitHub Actions CI pipelines for continuous quality monitoring and faster defect detection."
+    ],
+    "tags": ["Playwright", "TypeScript", "Java", "GitHub Actions", "Power Platform", "SQL"]
+  },
+  {
+    "role": "ML Engineer Trainee",
+    "company": "Bosch India",
+    "location": "Nashik",
+    "start": "Jun 2024",
+    "end": "Dec 2024",
+    "points": [
+      "Built an ML pipeline that predicts optimal production settings, improving First Pass Yield and reducing material waste.",
+      "Trained a CNN-based computer vision model for rapid, automated product defect detection.",
+      "Shipped a real-time monitoring app with Django and Plotly, wiring SQL databases to machine PLCs for live dashboards and early maintenance warnings."
+    ],
+    "tags": ["Python", "CNN", "LSTM", "XGBoost", "Django", "Plotly", "SQL"]
+  },
+  {
+    "role": "Tech Lead",
+    "company": "Google Developer Student Clubs",
+    "location": "GHRCEM, Nagpur",
+    "start": "2022",
+    "end": "2023",
+    "points": [
+      "Led the chapter's technical team, planning workshops, hands-on sessions and student-focused tech events.",
+      "Ran the Google Cloud Study Jam for 200+ participants, guiding them through hands-on Google Cloud labs to completion.",
+      "Gave talks on Google Cloud and emerging tech, helping students pick up new tools and trends."
+    ],
+    "tags": ["Leadership", "Google Cloud", "Public speaking", "Event management"]
+  }
+]

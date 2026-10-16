@@ -1,0 +1,24 @@
+---
+import SectionHead from './SectionHead.astro';
+import jobs from '../data/experience.json';
+---
+<section id="work" class="section">
+  <div class="wrap">
+    <SectionHead n="02" title="Work" sub="Where I've shipped, broken, and fixed things." />
+    <div class="ml-2 border-l border-line">
+      {jobs.map((j) => (
+        <div class="relative pb-14 pl-8 last:pb-0" data-reveal>
+          <span class="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-teal bg-bg"></span>
+          <p class="font-mono text-xs text-dim">{j.start} — {j.end} · {j.location}</p>
+          <h3 class="mt-1 text-xl font-semibold text-ink">{j.role} <span class="text-dim">@</span> <span class="text-violet">{j.company}</span></h3>
+          <ul class="mt-4 space-y-2.5">
+            {j.points.map((p) => (
+              <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-teal"></span><span>{p}</span></li>
+            ))}
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">{j.tags.map((t) => <span class="chip">{t}</span>)}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

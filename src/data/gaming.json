@@ -1,0 +1,35 @@
+{
+  "quote": "When I'm not hunting bugs, I'm sniping enemies.",
+  "cod": {
+    "game": "Call of Duty: Mobile",
+    "handle": "Maverick21A00",
+    "level": 151,
+    "rank": "Legendary",
+    "mode": "Ranked multiplayer",
+    "season": "Season 3 · Sep – Nov 2026",
+    "globalPercentile": "3.6%",
+    "emblem": "/game/legendry.png"
+  },
+  "stats": [
+    { "label": "K/D ratio", "value": "1.34" },
+    { "label": "Win rate", "value": "59%" },
+    { "label": "Matches played", "value": "144" },
+    { "label": "Matches won", "value": "85" },
+    { "label": "Avg score", "value": "787" },
+    { "label": "Win streak", "value": "9" },
+    { "label": "Impact plays", "value": "22" },
+    { "label": "MVP (in defeat)", "value": "8" }
+  ],
+  "loadout": [
+    { "name": "LW3-Tundra", "class": "Sniper", "blueprint": "Abyssal Zone", "mastery": "Master",
+      "damage": 91, "accuracy": 70, "range": 46, "fireRate": 27, "mobility": 39, "control": 32,
+      "image": "/game/lw3-tundra.png" },
+    { "name": "Static-HV", "class": "SMG", "mastery": "Platinum",
+      "damage": 27, "accuracy": 37, "range": 63, "fireRate": 82, "mobility": 104, "control": 28,
+      "image": "/game/static-hv.png" },
+    { "name": "MG42", "class": "LMG", "mastery": "Master",
+      "damage": 22, "accuracy": 35, "range": 54, "fireRate": 115, "mobility": 40, "control": 44,
+      "image": "/game/mg42.png" }
+  ],
+  "chess": { "username": "mvrk_ajk", "profile": "https://www.chess.com/member/mvrk_ajk" }
+}

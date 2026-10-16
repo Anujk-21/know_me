@@ -1,0 +1,7 @@
+{
+  "Languages": ["Python", "TypeScript", "JavaScript", "Java", "SQL", "HTML/CSS"],
+  "Automation & QA": ["Playwright", "Page Object Model", "Allure", "Functional testing", "Data-driven testing"],
+  "AI & ML": ["Scikit-learn", "CNN", "LSTM", "XGBoost", "Vision Transformers", "GenAI & prompting", "Agent Development Kit"],
+  "Cloud & DevOps": ["GitHub Actions", "Git", "AWS", "Google Cloud", "Node.js"],
+  "Data & low-code": ["Power BI", "Power Apps", "Power Automate", "Django", "Plotly"]
+}

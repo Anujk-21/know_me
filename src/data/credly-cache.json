@@ -1,0 +1,82 @@
+[
+  {
+    "id": "313de546-31d5-4410-a8f2-5090f66585ba",
+    "name": "Deploy Gemini Enterprise with Workspace Data Sources and Model Armor",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/d82b7124-5d8a-4bb9-a3c0-7220e172f948/blob",
+    "issued": "2026-10-08",
+    "url": "https://www.credly.com/badges/313de546-31d5-4410-a8f2-5090f66585ba"
+  },
+  {
+    "id": "288de676-c8f6-4076-b122-3920ebfab1c0",
+    "name": "Certified Partner Specialist Gemini Enterprise Agent Development",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/73e93208-0df3-435d-b58c-07c8ee6019d9/blob",
+    "issued": "2026-09-29",
+    "url": "https://www.credly.com/badges/288de676-c8f6-4076-b122-3920ebfab1c0"
+  },
+  {
+    "id": "affe4438-8f2a-4379-b868-6e6bbaab7d20",
+    "name": "Evaluate and Improve Agent Development Kit Agents",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/b1800059-b7de-4065-851d-678287ea0720/blob",
+    "issued": "2026-09-29",
+    "url": "https://www.credly.com/badges/affe4438-8f2a-4379-b868-6e6bbaab7d20"
+  },
+  {
+    "id": "f4f63564-5a58-46ab-bce7-1642569a5c4d",
+    "name": "Accelerate Development with Antigravity",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/9a9bd5ca-b41b-41ed-82ad-43968d960f62/blob",
+    "issued": "2026-09-28",
+    "url": "https://www.credly.com/badges/f4f63564-5a58-46ab-bce7-1642569a5c4d"
+  },
+  {
+    "id": "314d08e3-4dc9-476e-b11a-372dd6baae87",
+    "name": "Deploy an Agent with Agent Development Kit (ADK)",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/e9c45e2a-a48e-4686-99df-7de0ccd6dae7/blob",
+    "issued": "2026-09-28",
+    "url": "https://www.credly.com/badges/314d08e3-4dc9-476e-b11a-372dd6baae87"
+  },
+  {
+    "id": "a23cc9d3-5c55-4334-b00f-0caea11105d7",
+    "name": "Build with Gemini",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/384e1386-110e-439d-8014-18fe42bb5f18/blob",
+    "issued": "2026-09-24",
+    "url": "https://www.credly.com/badges/a23cc9d3-5c55-4334-b00f-0caea11105d7"
+  },
+  {
+    "id": "979cc299-f02f-4b32-a89c-4261569cbde6",
+    "name": "Claude Certified Architect - Foundations",
+    "issuer": "Anthropic",
+    "image": "https://images.credly.com/images/f2040db3-3904-4240-8966-e87b1510bea0/blob",
+    "issued": "2026-05-14",
+    "url": "https://www.credly.com/badges/979cc299-f02f-4b32-a89c-4261569cbde6"
+  },
+  {
+    "id": "b335d9d2-5a17-4ac3-901e-8022fe2311d0",
+    "name": "Context Engineering Foundation",
+    "issuer": "Cognizant",
+    "image": "https://images.credly.com/images/eac69c98-c276-4346-b67b-9ba4ca250f7c/blob",
+    "issued": "2026-04-16",
+    "url": "https://www.credly.com/badges/b335d9d2-5a17-4ac3-901e-8022fe2311d0"
+  },
+  {
+    "id": "5d847174-2877-4229-98f1-b1be88fd563e",
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services Training and Certification",
+    "image": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+    "issued": "2026-04-15",
+    "url": "https://www.credly.com/badges/5d847174-2877-4229-98f1-b1be88fd563e"
+  },
+  {
+    "id": "500ccc78-0e4b-45e4-9aab-f507c51fccb3",
+    "name": "Cloud Digital Leader Certification",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/44994cda-b5b0-44cb-9a6d-d29b57163073/image.png",
+    "issued": "2026-04-01",
+    "url": "https://www.credly.com/badges/500ccc78-0e4b-45e4-9aab-f507c51fccb3"
+  }
+]

@@ -1,0 +1,21 @@
+---
+import profile from '../data/profile.json';
+---
+<section id="top" class="flex min-h-[100svh] items-center">
+  <div class="wrap w-full">
+    <p class="hero-item font-mono text-sm text-teal" style="--i:0">// hello world, I'm</p>
+    <h1 class="hero-item mt-3 text-5xl font-semibold text-ink md:text-7xl" style="--i:1">{profile.name}</h1>
+    <p class="hero-item mt-5 font-mono text-lg text-muted md:text-xl" style="--i:2">
+      {profile.tagline}<span class="cursor ml-1 inline-block h-5 w-2.5 translate-y-1 bg-teal"></span>
+    </p>
+    <p class="hero-item mt-6 max-w-xl text-muted" style="--i:3">
+      Software Engineer · Automation &amp; AI. Playwright, TypeScript, Java and Python by day; neural networks whenever I can.
+    </p>
+    {profile.openToWork && (
+      <p class="hero-item mt-8 flex items-center gap-2 font-mono text-xs text-dim" style="--i:4">
+        <span class="pulse inline-block h-2 w-2 rounded-full bg-teal"></span>
+        open to opportunities · {profile.location}
+      </p>
+    )}
+  </div>
+</section>

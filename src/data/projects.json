@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Optimum parameter prediction for FPY",
+    "category": "AI/ML",
+    "metric": "RMSE 0.015 → 0.001",
+    "summary": "Stacked ensemble (CNN + LSTM base learners, XGBoost meta-regressor) that predicts ideal production settings, deployed into a live manufacturing line.",
+    "tags": ["Python", "CNN", "LSTM", "XGBoost"],
+    "github": ""
+  },
+  {
+    "title": "White blood cell classification with ViT",
+    "category": "Research",
+    "metric": "IEEE publication",
+    "summary": "Benchmark study of Vision Transformers across multiple public WBC datasets. Published at IEEE INDISCON 2025.",
+    "tags": ["Vision Transformer", "Deep learning", "Medical imaging"],
+    "github": "https://github.com/Anujk-21/TriNet-WBC-Classifier"
+  },
+  {
+    "title": "Myntra e-commerce flow automation",
+    "category": "Automation",
+    "metric": "Allure reports + screenshots",
+    "summary": "End-to-end Playwright suite for search, dynamic color filters, cart and quantity changes, handling multi-tab navigation and async modals.",
+    "tags": ["Playwright", "TypeScript", "Allure"],
+    "github": "https://github.com/Anujk-21/MyntraE2E_Playwright"
+  },
+  {
+    "title": "Rediff Mail registration automation",
+    "category": "Automation",
+    "metric": "CI on every push",
+    "summary": "Full registration flow automation with form validation, dropdown count checks and a GitHub Actions CI pipeline.",
+    "tags": ["Playwright", "Java", "GitHub Actions"],
+    "github": "https://github.com/Anujk-21/Rediff_Playwright_Java"
+  },
+  {
+    "title": "Application logging and alerting system",
+    "category": "Automation",
+    "metric": "Real-time alerts",
+    "summary": "Internal tool on Microsoft Power Platform that monitors log tables and sends real-time email alerts the moment an app misbehaves.",
+    "tags": ["Power Apps", "Power Automate", "Low-code"],
+    "github": ""
+  },
+  {
+    "title": "Lost & Found Item Tracker",
+    "category": "Web Application",
+    "metric": "Full-stack app",
+    "summary": "Web app for reporting and tracking lost and found items, with a searchable MongoDB store and a simple Streamlit interface that helps reunite belongings with their owners.",
+    "tags": ["Python", "Streamlit", "MongoDB"],
+    "github": "https://github.com/Anujk-21/Lost_Found_Tracker_App"
+  }
+]

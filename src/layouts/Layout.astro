@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import Background from '../components/Background.astro';
+import Intro from '../components/Intro.astro';
+import Nav from '../components/Nav.astro';
+
+const title = 'Anuj Karoddeo · Software Engineer · Automation & AI';
+const description =
+  'Software engineer at the intersection of test automation and AI. Playwright, TypeScript, Java, Python, and neural networks.';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a0b10" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('js');
+        var seen = false;
+        try { seen = !!sessionStorage.getItem('intro-seen'); } catch (e) {}
+        var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        d.classList.add(!seen && !rm ? 'intro-pending' : 'intro-done');
+      })();
+    </script>
+  </head>
+  <body>
+    <Background />
+    <Intro />
+    <Nav />
+    <main><slot /></main>
+    <script>
+      const els = document.querySelectorAll('[data-reveal]');
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }),
+        { threshold: 0.12 }
+      );
+      els.forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

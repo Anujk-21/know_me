@@ -1,0 +1,43 @@
+<div id="intro" class="fixed inset-0 z-[100] bg-bg/95 px-6 pt-[18vh] font-mono text-[13px] md:text-sm" aria-hidden="true">
+  <div class="mx-auto max-w-3xl space-y-2">
+    <p data-line><span class="text-dim">$</span> npx playwright test <span class="text-violet">anuj.spec.ts</span></p>
+    <p data-line class="text-dim">Running 5 tests using 1 worker</p>
+    <p data-line><span class="text-teal">✓</span> has curiosity <span class="text-dim">(12ms)</span></p>
+    <p data-line><span class="text-teal">✓</span> automates the boring stuff <span class="text-dim">(8ms)</span></p>
+    <p data-line><span class="text-teal">✓</span> writes clean, tested code <span class="text-dim">(15ms)</span></p>
+    <p data-line><span class="text-teal">✓</span> ships on time <span class="text-dim">(9ms)</span></p>
+    <p data-line><span class="text-teal">✓</span> clutch in ranked matches <span class="text-dim">(4ms)</span></p>
+    <p data-line class="pt-2 text-teal">5 passed — launching portfolio...</p>
+  </div>
+</div>
+
+<script>
+  const el = document.getElementById('intro');
+  const root = document.documentElement;
+  if (el) {
+    if (!root.classList.contains('intro-pending')) el.remove();
+    else run(el);
+  }
+  function run(el: HTMLElement) {
+    const lines = [...el.querySelectorAll<HTMLElement>('[data-line]')];
+    const timers: number[] = [];
+    let done = false;
+    lines.forEach((l, i) => timers.push(window.setTimeout(() => l.classList.add('on'), 250 + i * 260)));
+    timers.push(window.setTimeout(finish, 250 + (lines.length - 1) * 260 + 500));
+    function finish() {
+      if (done) return;
+      done = true;
+      timers.forEach(clearTimeout);
+      el.style.transition = 'opacity .4s ease';
+      el.style.opacity = '0';
+      window.setTimeout(() => {
+        root.classList.replace('intro-pending', 'intro-done');
+        try { sessionStorage.setItem('intro-seen', '1'); } catch {}
+        window.dispatchEvent(new Event('intro:done'));
+        el.remove();
+      }, 400);
+    }
+    addEventListener('keydown', finish);
+    addEventListener('click', finish);
+  }
+</script>

@@ -1,0 +1,28 @@
+---
+import profile from '../data/profile.json';
+const l = profile.links;
+const rows = [
+  ['email', l.email, `mailto:${l.email}`],
+  ['linkedin', 'in/anujk21', l.linkedin],
+  ['github', 'Anujk-21', l.github],
+  ['credly', 'users/anujk', l.credly],
+  ...(l.medium ? [['medium', l.medium.replace('https://', ''), l.medium]] : []),
+];
+---
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="card p-8 md:p-14" data-reveal>
+      <p class="label">07 //</p>
+      <h2 class="mt-2 text-4xl font-semibold text-ink md:text-5xl">Let's talk.</h2>
+      <p class="mt-4 max-w-xl text-muted">Got a role, a project, or a hot take on AI? My inbox is open.</p>
+      <a href={`mailto:${l.email}`} class="btn-primary mt-8">say hello →</a>
+      <ul class="mt-10 grid gap-3 font-mono text-sm md:grid-cols-2">
+        {rows.map(([label, value, href]) => (
+          <li class="flex gap-4"><span class="w-20 text-dim">{label}</span>
+            <a href={href} target={href.startsWith('mailto') ? undefined : '_blank'} rel="noopener" class="text-violet hover:underline">{value}</a></li>
+        ))}
+      </ul>
+    </div>
+    <footer class="mt-12 text-center font-mono text-xs text-dim">© {new Date().getFullYear()} Anuj Karoddeo</footer>
+  </div>
+</section>

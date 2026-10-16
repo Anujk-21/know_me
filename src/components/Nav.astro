@@ -1,0 +1,24 @@
+---
+const links = ['about', 'work', 'projects', 'credentials', 'player', 'contact'];
+---
+<header id="nav" class="fixed inset-x-0 top-0 z-50 h-16 border-b border-transparent font-mono text-[13px] transition-colors duration-200">
+  <div class="wrap flex h-full items-center justify-between">
+    <a href="#top" class="text-teal">~/anuj</a>
+    <nav class="hidden gap-7 md:flex">
+      {links.map((l) => <a href={`#${l}`} class="text-muted transition hover:text-ink">{l}</a>)}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('nav')!;
+  const on = ['bg-bg/80', 'backdrop-blur', 'border-line'];
+  const off = ['border-transparent'];
+  const update = () => {
+    const s = window.scrollY > 24;
+    on.forEach((c) => nav.classList.toggle(c, s));
+    off.forEach((c) => nav.classList.toggle(c, !s));
+  };
+  update();
+  addEventListener('scroll', update, { passive: true });
+</script>

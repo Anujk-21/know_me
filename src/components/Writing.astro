@@ -1,0 +1,22 @@
+---
+import SectionHead from './SectionHead.astro';
+import profile from '../data/profile.json';
+import { getPosts } from '../lib/medium';
+const posts = profile.mediumUser ? await getPosts(profile.mediumUser) : [];
+---
+{profile.mediumUser && posts.length > 0 && (
+  <section id="writing" class="section">
+    <div class="wrap">
+      <SectionHead n="05" title="Writing" sub="Thinking out loud on Medium." />
+      <div class="grid gap-5 md:grid-cols-3">
+        {posts.map((p) => (
+          <a href={p.link} target="_blank" rel="noopener" class="card card-hover p-6" data-reveal>
+            <p class="font-mono text-xs text-dim">{p.date}</p>
+            <h3 class="mt-2 text-lg font-semibold text-ink">{p.title}</h3>
+            <p class="mt-2 text-sm text-muted">{p.excerpt}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

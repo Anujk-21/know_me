@@ -1,0 +1,13 @@
+{
+  "degree": "B.Tech in Artificial Intelligence",
+  "school": "G H Raisoni College of Engineering & Management, Nagpur",
+  "years": "2021 – 2025",
+  "cgpa": "CGPA 9.32 / 10",
+  "achievements": ["Two-time gold medalist for academic excellence (third and final year)"],
+  "publication": {
+    "title": "White Blood Cell Classification Using Vision Transformer: A Benchmark Study on Multiple Public Datasets",
+    "venue": "2025 IEEE 6th India Council International Subsections Conference (INDISCON)",
+    "authors": "Anuj Karoddeo, S. Nirkhi, N. Shelke, M. Motghare, S. Singh, R. Balla",
+    "url": "https://ieeexplore.ieee.org/document/11252122"
+  }
+}

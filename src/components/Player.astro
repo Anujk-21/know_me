@@ -1,0 +1,97 @@
+---
+import SectionHead from './SectionHead.astro';
+import g from '../data/gaming.json';
+import { getChess } from '../lib/chess';
+
+const chess = await getChess(g.chess.username);
+const stats = g.stats.filter((s) =>
+  ['K/D ratio', 'Win rate', 'Matches played', 'Win streak'].includes(s.label)
+);
+const pick = ['LW3-Tundra', 'Static-HV', 'MG42'];
+const guns = g.loadout.filter((w) => pick.includes(w.name));
+---
+<section id="player" class="section">
+  <div class="wrap">
+    <SectionHead n="06" title="Off the clock" sub={g.quote.replace("When I'm", 'When I’m')} />
+
+    <div class="card grid overflow-hidden md:grid-cols-[1.7fr_1fr]" data-reveal>
+      <!-- COD -->
+      <div class="relative p-7 md:p-8">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_85%_100%,rgba(94,234,212,0.07),transparent_60%)]"></div>
+
+        <div class="relative flex items-center gap-5">
+          <img src={g.cod.emblem} alt="Legendary rank emblem" width="72" height="72"
+            class="h-[72px] w-[72px] object-contain drop-shadow-[0_0_18px_rgba(94,234,212,0.25)]" />
+          <div>
+            <p class="font-mono text-xs text-teal">call of duty: mobile · ranked multiplayer</p>
+            <p class="mt-1 text-xl text-ink">{g.cod.rank}</p>
+            <p class="font-mono text-xs text-muted">@{g.cod.handle} · lv {g.cod.level} · top {g.cod.globalPercentile} global</p>
+          </div>
+        </div>
+
+        <div class="relative mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
+          {stats.map((s) => (
+            <div>
+              <p class="font-mono text-2xl text-teal">{s.value}</p>
+              <p class="mt-1 text-xs text-muted">{s.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Loadout (inside the same card) -->
+        <div class="relative mt-8 border-t border-line pt-6">
+          <p class="label mb-4">loadout</p>
+          <div class="grid sm:grid-cols-3 sm:divide-x sm:divide-line">
+            {guns.map((w) => (
+              <div class="group px-0 py-4 first:pl-0 sm:px-5 sm:py-0 sm:first:pl-0 sm:last:pr-0">
+                <img src={w.image} alt={`${w.name} ${w.class}`} loading="lazy"
+                  class="h-20 w-full object-contain object-left drop-shadow-[0_8px_14px_rgba(0,0,0,0.6)] transition duration-300 group-hover:scale-105" />
+                <div class="mt-3 flex items-baseline justify-between gap-2">
+                  <p class="text-sm text-ink">{w.name}</p>
+                  <p class="font-mono text-[11px] text-dim">{w.class.toLowerCase()}</p>
+                </div>
+                <p class="mt-0.5 font-mono text-[11px] text-teal">{w.mastery.toLowerCase()}</p>
+                <div class="mt-3 space-y-1.5">
+                  {[['dmg', w.damage], ['rate', w.fireRate], ['mob', w.mobility]].map(([label, v]) => (
+                    <div class="flex items-center gap-2 font-mono text-[10px] text-dim">
+                      <span class="w-7">{label}</span>
+                      <div class="h-1 flex-1 rounded-full bg-line">
+                        <div class="h-full rounded-full bg-teal/70" style={`width:${Math.min(100, Number(v))}%`}></div>
+                      </div>
+                      <span class="w-6 text-right text-muted">{v}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Chess -->
+      <a href={g.chess.profile} target="_blank" rel="noopener"
+        class="block border-t border-line p-7 transition hover:bg-violet/5 md:border-l md:border-t-0 md:p-8">
+        <div class="flex items-center gap-4">
+          <span class="flex h-14 w-14 items-center justify-center rounded-xl border border-line text-3xl text-teal">♞</span>
+          <div>
+            <p class="font-mono text-xs text-teal">chess.com</p>
+            <p class="text-sm text-ink">When the aim rests, the brain doesn’t.</p>
+            <p class="font-mono text-xs text-muted">@{g.chess.username}</p>
+          </div>
+        </div>
+        {chess ? (
+          <div class="mt-8 grid grid-cols-2 gap-6">
+            {chess.map((s) => (
+              <div>
+                <p class="font-mono text-2xl text-teal">{s.value}</p>
+                <p class="mt-1 text-xs text-muted">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p class="mt-8 font-mono text-sm text-violet">challenge me →</p>
+        )}
+      </a>
+    </div>
+  </div>
+</section>

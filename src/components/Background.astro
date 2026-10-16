@@ -1,0 +1,59 @@
+<canvas id="bg" aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 h-full w-full" style="opacity:.3;transition:opacity 1.4s ease"></canvas>
+
+<script>
+  const c = document.getElementById('bg') as HTMLCanvasElement;
+  const ctx = c.getContext('2d')!;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  type N = { x: number; y: number; vx: number; vy: number };
+  let w = 0, h = 0, nodes: N[] = [];
+
+  const seed = () => {
+    const n = Math.min(110, Math.floor((w * h) / 11000));
+    nodes = Array.from({ length: n }, () => ({
+      x: Math.random() * w, y: Math.random() * h,
+      vx: (Math.random() * 2 - 1) * 0.09, vy: (Math.random() * 2 - 1) * 0.09,
+    }));
+  };
+  const resize = () => {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const nw = window.innerWidth;
+    h = window.innerHeight;
+    c.width = nw * dpr; c.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (nw !== w) { w = nw; seed(); }
+    if (reduced) draw();
+  };
+  const draw = () => {
+    ctx.clearRect(0, 0, w, h);
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+        const d = Math.hypot(dx, dy);
+        if (d < 150) {
+          ctx.strokeStyle = `rgba(167,139,250,${0.28 * (1 - d / 150)})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
+        }
+      }
+    }
+    ctx.fillStyle = 'rgba(94,234,212,0.7)';
+    for (const n of nodes) { ctx.beginPath(); ctx.arc(n.x, n.y, 1.8, 0, Math.PI * 2); ctx.fill(); }
+  };
+  const tick = () => {
+    for (const n of nodes) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > w) n.vx *= -1;
+      if (n.y < 0 || n.y > h) n.vy *= -1;
+    }
+    draw();
+    requestAnimationFrame(tick);
+  };
+
+  resize();
+  addEventListener('resize', resize);
+  if (!reduced) requestAnimationFrame(tick);
+
+  const root = document.documentElement;
+  if (root.classList.contains('intro-done')) c.style.opacity = '1';
+  else window.addEventListener('intro:done', () => (c.style.opacity = '1'), { once: true });
+</script>

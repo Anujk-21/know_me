@@ -1,0 +1,27 @@
+{
+  "name": "Anuj Karoddeo",
+  "role": "Software Engineer · Automation & AI",
+  "tagline": "I build things and prove they work",
+  "location": "Pune, India",
+  "openToWork": true,
+  "about": [
+    "I'm a software engineer who sits where automation meets AI. By day I build test frameworks and CI pipelines at Cognizant with Playwright, TypeScript and Java, so teams can ship without crossing their fingers.",
+    "Before that, I trained CNNs to spot manufacturing defects at Bosch and published IEEE research on classifying white blood cells with Vision Transformers. Biology taught me how real neurons learn; a B.Tech in AI taught me how to build the artificial kind.",
+    "I like systems that are fast, observable and boringly reliable. Off the clock, I'm probably in a ranked COD lobby."
+  ],
+  "highlights": [
+    { "value": "9.32", "label": "CGPA, B.Tech in AI" },
+    { "value": "IEEE", "label": "Published researcher" },
+    { "value": "10+", "label": "Verified certifications" },
+    { "value": "0.001", "label": "RMSE on a live Bosch model" }
+  ],
+  "links": {
+    "email": "anujkaroddeo@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/anujk21",
+    "credly": "https://www.credly.com/users/anujk",
+    "github": "https://github.com/Anujk-21",
+    "medium": ""
+  },
+  "credlyUser": "anujk",
+  "mediumUser": ""
+}
